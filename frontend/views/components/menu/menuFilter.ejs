@@ -1,0 +1,56 @@
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search biryani, paneer, pizza...">
+  <span>🔍</span>
+</div>
+
+<div class="filters">
+  <a href="/menu" class="<%= active === 'all' ? 'active' : '' %>">All</a>
+  <a href="/menu/veg" class="<%= active === 'veg' ? 'active' : '' %>">Veg</a>
+  <a href="/menu/non-veg" class="<%= active === 'non-veg' ? 'active' : '' %>">Non-Veg</a>
+  <a href="/menu/biryani" class="<%= active === 'biryani' ? 'active' : '' %>">Biryani</a>
+  <a href="/menu/pizza" class="<%= active === 'pizza' ? 'active' : '' %>">Pizza</a>
+  <a href="/menu/dessert" class="<%= active === 'dessert' ? 'active' : '' %>">Dessert</a>
+</div>
+
+<div id="dishes-container"></div>
+
+<script>
+const dishes = "<%- JSON.stringify(typeof dishes !== 'undefined' ? dishes : []) %>";
+const activeFilter = "<%= typeof active !== 'undefined' ? active : 'all' %>";
+
+console.log("Loaded dishes:", dishes);
+console.log("Active filter:", activeFilter);
+
+const searchInput = document.getElementById('searchInput');
+const container = document.getElementById('dishes-container');
+
+function renderDishes(list) {
+  if(list.length === 0){
+    container.innerHTML = "<p>No dishes found</p>";
+    return;
+  }
+  container.innerHTML = list.map(dish => `
+    <div class="card">
+      <img src="${dish.image}" width="100">
+      <h3>${dish.title}</h3>
+      <p>${dish.category} - ${dish.type}</p>
+    </div>
+  `).join('');
+}
+
+function filterDishes() {
+  const searchText = searchInput.value.toLowerCase();
+  
+  let filtered = dishes.filter(dish => {
+    const matchSearch = dish.title.toLowerCase().includes(searchText) || (dish.category && dish.category.toLowerCase().includes(searchText));
+    return matchSearch;
+  });
+  
+  renderDishes(filtered);
+}
+
+searchInput.addEventListener('input', filterDishes);
+
+// First time render
+renderDishes(dishes);
+</script>

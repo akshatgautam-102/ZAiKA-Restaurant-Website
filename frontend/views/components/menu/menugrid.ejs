@@ -1,0 +1,19 @@
+<div class="menu-grid" id="menuGrid">
+  <% if(dishes.length === 0){ %>
+    <p style="color:#666;text-align:center;grid-column:1/-1">No dishes found in <%= active %></p>
+  <% } %>
+  <% dishes.forEach(dish => { %>
+    <div class="card" data-name="<%= dish.title.toLowerCase() %>">
+      <img src="<%= dish.image %>" alt="<%= dish.title %>">
+      <div class="card-body">
+        <div class="card-top">
+          <h3><%= dish.title %></h3>
+          <div class="price">₹<%= dish.price || '299' %></div>
+        </div>
+        <p><%= dish.description || 'Freshly prepared' %></p>
+        <span class="tag veg">● <%= dish.category || 'VEG' %></span>
+        <button class="order-btn" onclick="window.location.href='/#reservation'">MAKE RESERVATION</button>
+      </div>
+    </div>
+  <% }) %>
+</div>

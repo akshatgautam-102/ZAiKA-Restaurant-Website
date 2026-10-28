@@ -1,0 +1,19 @@
+<section class="team" id="team">
+    <div class="container">
+        <div class="heading-section">
+            <h1>OUR TEAM</h1>
+            <p>Meet our expert team members who make your experience amazing</p>
+        </div>
+        <div class="tema_container">
+            <% if (team && team.length > 0) { %>
+                <% team.forEach(element => { %>
+                    <div class="card" id="<%= element.id %>">
+                        <img src="<%= element.image %>" alt="<%= element.name %>" />
+                        <h3><%= element.name %></h3>
+                        <p><%= element.designation %></p>
+                    </div>
+                <% }) %>
+            <% } %>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="howarewe-section" id="whoarewe">
+  <div class="howarewe-container">
+    <div class="text_banner">
+      <% if (whoarewe && whoarewe.length > 0) { %>
+        <% whoarewe.forEach(element => { %>
+          <div class="card" id="<%= element.id %>">
+            <h1><%= element.number %></h1>
+            <p><%= element.title %></p>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+
+    <div class="image_banner">
+      <img src="/img/center.png" alt="center" class="gradient_bg" />
+      <img src="/img/who.png" alt="who" />
+    </div>
+  </div>
+</section>

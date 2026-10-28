@@ -1,0 +1,51 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="/img/logo.png" alt="logo" style="width:60px;" />
+      <span>ZAiKA</span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About Us</a></li>
+      <li><a href="/#whoarewe">Services</a></li>
+      <li><a href="/#team">Team</a></li>
+      <li><a href="/#reservation">Reservation</a></li>
+      <li><a href="/menu">Our Menu</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger" style="cursor:pointer; font-size:28px;">
+      ☰
+    </div>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  let isOpen = false;
+
+
+  function checkScreen() {
+    if (window.innerWidth <= 768) {
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+    }
+  }
+
+  checkScreen();
+  window.addEventListener('resize', checkScreen);
+
+  hamburger.addEventListener('click', () => {
+    isOpen = !isOpen;
+    if (isOpen) {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      hamburger.innerHTML = '✕';
+    } else {
+      navLinks.style.display = 'none';
+      hamburger.innerHTML = '☰';
+    }
+  });
+</script>

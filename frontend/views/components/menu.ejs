@@ -1,0 +1,30 @@
+<section class="menu-section" id="menu">
+  <div class="menu-container">
+    <div class="menu-header">
+      <span class="small-tag">OUR MENU</span>
+      <h2>Popular Dishes</h2>
+      <p>Discover our chef's special creations made with love</p>
+    </div>
+
+    <div class="menu-grid">
+      <% dishes.slice(0,4).forEach(d => { %>
+        <div class="dish-card">
+          <div class="dish-img-wrap">
+            <img src="<%= d.image %>" alt="<%= d.title %>" />
+            <span class="dish-cat"><%= d.category %></span>
+          </div>
+          <div class="dish-info">
+            <h3><%= d.title %></h3>
+            <div class="dish-bottom">
+              <span class="price">₹<%= d.price || '299' %></span>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+
+    <div class="menu-btn-wrap">
+      <a href="/menu" class="view-all-btn">View Full Menu →</a>
+    </div>
+  </div>
+</section>

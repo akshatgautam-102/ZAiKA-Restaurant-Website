@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= active.toUpperCase() %> Menu | ZAiKA</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="nav"><div class="logo">ZAiKA<span>.</span></div><a href="/">← HOME</a></div>
+  <div class="header"><h1>Our <span><%= active.toUpperCase() %></span> Menu</h1></div>
+  
+  <%- include('menu/menuFilter', {active}) %>
+  <%- include('menu/menugrid', {dishes, active}) %>
+
+<script>
+document.getElementById('searchInput')?.addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    document.querySelectorAll('#menuGrid .card').forEach(card => {
+        const name = card.dataset.name || '';
+        card.style.display = name.includes(q) ? '' : 'none';
+    });
+});
+</script>
+</body>
+</html>

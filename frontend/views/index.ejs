@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Spice House - Delicious Food Dishes</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <%- include('components/navbar', { navItems: navItems }) %>
+  <%- include('components/heroSection') %>
+  <%-include ('components/about',{about:about, qualities:qualities}) %>
+  <%- include('components/qualities', { qualities: qualities }) %>
+<%- include('components/menu', { dishes: dishes }) %>
+<%- include('components/whoarewe', { whoarewe: whoarewe }) %>
+<%- include('components/team', {team:team}) %>
+<%- include('components/reservation') %>
+<%- include('components/footer')%>
+<script>
+  // Navbar scroll + hamburger
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 20) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+  });
+  document.getElementById('hamburger')?.addEventListener('click', () => {
+    document.getElementById('navLinks')?.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

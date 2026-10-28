@@ -1,0 +1,25 @@
+<section class="about-section" id="about">
+  <div class="about-container">
+    <div class="about-left">
+      <span class="small-tag">ABOUT US</span>
+      <h2 class="about-title"><%= about.title %></h2>
+      <p class="about-desc"><%= about.description %></p>
+      <p class="about-desc light">
+        We don't just serve food, we serve a memorable experience. Farm-fresh vegetables straight from the source and the magic of our expert chefs – that's what defines us.
+      </p>
+      <a href="#menu" class="about-btn">Explore Menu →</a>
+    </div>
+    <div class="about-right">
+      <div class="quality-grid">
+        <% qualities.forEach(q => { %>
+          <div class="quality-card">
+            <img src="<%= q.image %>" alt="<%= q.title %>" />
+            <h4><%= q.title %></h4>
+            <p><%= q.description %></p>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+
+  </div>
+</section>

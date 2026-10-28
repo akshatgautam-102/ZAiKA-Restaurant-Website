@@ -1,0 +1,171 @@
+{
+  "data": [
+    {
+        "navbar": [
+        { "name": "Home", "link": "#home", "type": "link", "active": true },
+        { "name": "About Us", "link": "#about", "type": "link" },
+        { "name": "Services", "link": "#services", "type": "link" },
+        { "name": "Team", "link": "#team", "type": "link" },
+        { "name": "Reservation", "link": "#reservation", "type": "link" },
+        { "name": "Our Menu", "link": "#menu", "type": "button" }
+      ],
+      "ourQualities": [
+          {
+            "id": 1,
+            "image": "/img/freshingridents.png",
+            "title": "Fresh Ingredients",
+            "description": "We use 100% fresh and organic vegetables directly from farms."
+          },
+          {
+            "id": 2,
+            "image": "/img/expertshef.png",
+            "title": "Expert Chefs",
+            "description": "Our master chefs have 15+ years of experience in Indian cuisine."
+          },
+          {
+            "id": 3,
+            "image": "/img/fastdelivery.png",
+            "title": "Fast Delivery",
+            "description": "Hot food delivered at your doorstep within 30 minutes."
+          }
+        ],
+      "dishes": [
+        {
+          "id": 1,
+          "image": "/img/dishes/paneerbuttermasala.png",
+          "title": "Paneer Butter Masala",
+          "category": "Main Course",
+          "type":"veg"
+        },
+        {
+          "id": 2,
+          "image": "/img/dishes/vegcheesepizza.png",
+          "title": "Veg Cheese Pizza",
+          "category": "Italian",
+          "type":"pizza"
+        },
+        {
+          "id": 3,
+          "image": "/img/dishes/maharajaburger.png",
+          "title": "Maharaja Burger",
+          "category": "Fast Food",
+          "type":"veg"
+        },
+        {
+          "id": 4,
+          "image": "/img/dishes/chickenbiryani.png",
+          "title": "Chicken Biryani",
+          "category": "Biryani",
+          "type":"biryani"
+        },
+        {
+          "id": 5,
+          "title": "daal makhni",
+          "image": "/img/dishes/dalmakhni.png",
+          "category": "Dinner",
+          "type": "veg"
+        },
+        {
+          "id": 6,
+          "title": "chole bhture",
+          "image": "/img/dishes/cholebhature.png",
+          "category": "Main Course",
+          "type": "veg"
+        },
+        {
+          "id": 7,
+          "title": "Veg Margherita Pizza",
+          "image": "/img/dishes/vegmargheritapizza.png",
+          "category": "Pizza",
+          "type": "pizza"
+        },
+        {
+          "id": 8,
+          "title": "Chocolate Brownie",
+          "image": "/img/dishes/choclate.png",
+          "category": "Dessert",
+          "type": "dessert"
+        },
+        {
+          "id": 9,
+          "title": "Butter Chicken",
+          "image": "/img/dishes/butterchicken.png",
+          "category": "Dinner",
+          "type": "non-veg"
+        },
+        {
+          "id": 10,
+          "title": "Veg Fried Rice",
+          "image": "/img/dishes/vegfriedrice.png",
+          "category": "Rice",
+          "type": "veg"
+        },
+        {
+          "id": 11,
+          "title": "Mutton Biryani",
+          "image": "/img/dishes/muttonbiryani.png",
+          "category": "Biryani",
+          "type": "biryani"
+        },
+        {
+          "id": 12,
+          "title": "Chicken Cheese Pizza",
+          "image": "/img/dishes/chickencheesepizza.png",
+          "category": "Pizza",
+          "type": "pizza"
+        },
+        {
+          "id": 13,
+          "title": "Gulab Jamun",
+          "image": "/img/dishes/gulabjamun.png",
+          "category": "Dessert",
+          "type": "dessert"
+        },
+        {
+          "id": 14,
+          "title": "Tandoori Chicken",
+          "image": "/img/dishes/tandoorichicken.png",
+          "category": "Starter",
+          "type": "non-veg"
+        }
+      ],
+      "team": [
+        {
+          "id": 1,
+          "image": "https://randomuser.me/api/portraits/men/32.jpg",
+          "name": "Rahul Sharma",
+          "designation": "Head Chef"
+        },
+        {
+          "id": 2,
+          "image": "https://randomuser.me/api/portraits/women/44.jpg",
+          "name": "Priya Singh",
+          "designation": "Restaurant Manager"
+        },
+        {
+          "id": 3,
+          "image": "https://randomuser.me/api/portraits/men/65.jpg",
+          "name": "Aman Verma",
+          "designation": "Sous Chef"
+        }
+      ],
+      "testimonials": [
+        {
+          "id": 1,
+          "image": "https://randomuser.me/api/portraits/men/11.jpg",
+          "name": "Vikash Kota",
+          "review": "Best food in Kota! Service is super fast."
+        }
+      ],
+      "about": {
+        "title": "The Spice House",
+        "description": "Serving happiness since 2010 with authentic taste and quality."
+      },
+      "whoarewe": [
+      { "id": "card1", "number": "150+", "title": "Happy Customers" },
+      { "id": "card2", "number": "20+", "title": "Years Experience" },
+      { "id": "card3", "number": "50+", "title": "Menu Dishes" }
+      ]
+    }
+  ]
+}

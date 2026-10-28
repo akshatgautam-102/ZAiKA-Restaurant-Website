@@ -1,0 +1,21 @@
+<section class="qualities-section" id="qualities">
+  <div class="qualities-container">
+    <div class="qualities-header">
+      <span class="small-tag">WHY CHOOSE US</span>
+      <h2>Our Special Qualities</h2>
+      <p>We don't just serve food, we serve a memorable experience.</p>
+    </div>
+
+    <div class="qualities-grid">
+      <% qualities.forEach(q => { %>
+        <div class="quality-box">
+          <div class="icon-box">
+            <img src="<%= q.image %>" alt="<%= q.title %>" />
+          </div>
+          <h3><%= q.title %></h3>
+          <p><%= q.description %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
